@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "293241315575",
+    "project_id": "bcs-backend-e4ac3",
+    "storage_bucket": "bcs-backend-e4ac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293241315575:android:5aaf3ba8e51c97dcdbb3f2",
+        "android_client_info": {
+          "package_name": "com.kemjirwn.bcs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ZX-1LVDpUbT94qL87Y5sZDlW3LoMug0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
