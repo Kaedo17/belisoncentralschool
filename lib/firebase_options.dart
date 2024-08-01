@@ -79,4 +79,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'bcs-backend-e4ac3.appspot.com',
     measurementId: 'G-MVMJ4CJDYC',
   );
+
 }
