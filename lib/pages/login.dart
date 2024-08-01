@@ -1,20 +1,56 @@
 
 import 'package:belisoncentralschool/components/my_button.dart';
 import 'package:belisoncentralschool/components/textfield.dart';
+import 'package:belisoncentralschool/helper/helper_functions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   
   final void Function()? onTap;
 
  
   LoginPage({super.key, required this.onTap});
 
-   // Text Editing Controller
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
+   // Text Editing Controller
   TextEditingController emailController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
 
+  void login() async{
+    //show loading circle
+
+    showDialog(
+        context: context,
+        builder: (context) => const Center(
+              child: CircularProgressIndicator(),
+            ));
+
+    // try signing in
+
+    try{
+      await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailController.text, password: passwordController.text);
+
+      //pop circle
+
+      if (context.mounted) Navigator.pop(context);
+    }
+
+    
+      on FirebaseAuthException catch (e) {
+        // pop circle
+        Navigator.pop(context);
+        // show message
+        displayMessageToUser(e.code, context);
+      }
+        
+            
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +129,7 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.w100),
                   ),
                   GestureDetector(
-                    onTap: onTap,
+                    onTap: widget.onTap,
                     child: const Text(
                       " Register here!",
                       style: TextStyle(fontWeight: FontWeight.w700),
