@@ -114,7 +114,10 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 30,
               ),
-              MyButton(text: 'Login'),
+              MyButton(
+                text: 'Login',
+                ontap: login,
+              ),
 
               // make account
               SizedBox(

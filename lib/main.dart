@@ -1,4 +1,5 @@
 
+import 'package:belisoncentralschool/auth/auth.dart';
 import 'package:belisoncentralschool/auth/login_or_register.dart';
 import 'package:belisoncentralschool/firebase_options.dart';
 import 'package:belisoncentralschool/themes/dark_mode.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: LoginOrRegister(),
+      home: const AuthPage(),
       
       theme: darkMode,
 
