@@ -21,17 +21,17 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: GNav(tabs: [
         GButton(icon: Icons.home,
-        text: 'Home',
+        text: ' Home',
         ),
         GButton(icon: Icons.chat,
-        text: "Message",
+        text: " Message",
         ),
         GButton(icon: Icons.person_rounded,
-        text: "Profile",
+        text: " Profile",
         ),
         GButton(icon: Icons.logout, 
         onPressed: logout,
-        text: "Logout",
+        text: " Logout",
         ),
       ]),
 
