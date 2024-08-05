@@ -2,6 +2,9 @@
 import 'package:belisoncentralschool/auth/auth.dart';
 import 'package:belisoncentralschool/auth/login_or_register.dart';
 import 'package:belisoncentralschool/firebase_options.dart';
+import 'package:belisoncentralschool/pages/homepage.dart';
+import 'package:belisoncentralschool/pages/login.dart';
+import 'package:belisoncentralschool/pages/new.dart';
 import 'package:belisoncentralschool/themes/dark_mode.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +29,12 @@ class MyApp extends StatelessWidget {
       theme: darkMode,
 
       darkTheme: darkMode,
+
+      routes: {
+        '/homepage': (context) => const HomePage(),
+        '/login':(context) => const LoginOrRegister(),
+        '/news':(context) => const News()
+      },
     );
   }
 }
