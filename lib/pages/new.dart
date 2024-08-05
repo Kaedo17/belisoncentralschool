@@ -1,20 +1,12 @@
 import 'package:flutter/material.dart';
 
-class News extends StatefulWidget {
+class News extends StatelessWidget {
   const News({super.key});
 
   @override
-  State<News> createState() => _NewsState();
-}
-
-class _NewsState extends State<News> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-      body: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-      ),
+    return Container(
+      child: Text('AMMAMAMMA'),
     );
   }
 }
